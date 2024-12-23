@@ -1,0 +1,44 @@
+<RentalForm>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        text: "Nama Lengkap:"
+    
+    TextInput:
+        id: nama_input
+        hint_text: "Masukkan Nama Lengkap"
+        multiline: False
+
+    Label:
+        text: "Alamat Email:"
+    
+    TextInput:
+        id: email_input
+        hint_text: "Masukkan Email"
+        multiline: False
+
+    Label:
+        text: "Pilih Gadget:"
+    
+    Spinner:
+        id: gadget_spinner
+        text: "Pilih Gadget"
+        values: ["Laptop", "Smartphone", "Tablet", "Kamera"]
+        size_hint: None, None
+        size: 200, 44
+
+    Label:
+        text: "Durasi Penyewaan (Hari):"
+    
+    TextInput:
+        id: durasi_input
+        hint_text: "Masukkan Durasi (hari)"
+        multiline: False
+
+    Button:
+        text: "Kirim"
+        size_hint: None, None
+        size: 200, 44
+        on_press: root.submit_form(None)
